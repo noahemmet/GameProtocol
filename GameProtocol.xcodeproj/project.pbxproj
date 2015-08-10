@@ -10,6 +10,8 @@
 		86DFA18F1B7824B000C2A160 /* GameProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 86DFA18E1B7824B000C2A160 /* GameProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86DFA1961B7824B000C2A160 /* GameProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86DFA18B1B7824B000C2A160 /* GameProtocol.framework */; };
 		86DFA19B1B7824B000C2A160 /* GameProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFA19A1B7824B000C2A160 /* GameProtocolTests.swift */; };
+		86DFA1A61B7824BC00C2A160 /* ComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFA1A51B7824BC00C2A160 /* ComponentType.swift */; };
+		86DFA1A81B78263A00C2A160 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DFA1A71B78263A00C2A160 /* Entities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		86DFA1951B7824B000C2A160 /* GameProtocolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameProtocolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86DFA19A1B7824B000C2A160 /* GameProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocolTests.swift; sourceTree = "<group>"; };
 		86DFA19C1B7824B000C2A160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86DFA1A51B7824BC00C2A160 /* ComponentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentType.swift; sourceTree = "<group>"; };
+		86DFA1A71B78263A00C2A160 /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				86DFA18E1B7824B000C2A160 /* GameProtocol.h */,
+				86DFA1A51B7824BC00C2A160 /* ComponentType.swift */,
+				86DFA1A71B78263A00C2A160 /* Entities.swift */,
 				86DFA1901B7824B000C2A160 /* Info.plist */,
 			);
 			path = GameProtocol;
@@ -142,6 +148,7 @@
 		86DFA1821B7824B000C2A160 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Sticks;
 				TargetAttributes = {
@@ -193,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86DFA1A81B78263A00C2A160 /* Entities.swift in Sources */,
+				86DFA1A61B7824BC00C2A160 /* ComponentType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 		86DFA1A01B7824B000C2A160 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sticks.GameProtocol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		86DFA1A11B7824B000C2A160 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
